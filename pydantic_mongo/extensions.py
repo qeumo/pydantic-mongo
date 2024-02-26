@@ -1,6 +1,6 @@
 from typing import Optional
 
-from flask_pymongo import PyMongo
+#from flask_pymongo import PyMongo
 from pymongo import MongoClient
 from pymongo.database import Database
 
@@ -43,4 +43,5 @@ class PydanticMongo(metaclass=SingletonMeta):
         return self.mongo.cx if self.mongo else None
 
     def init_app(self, app, uri=None, *args, **kwargs) -> None:
-        self.mongo = PyMongo(app, uri, *args, **kwargs)
+        pass
+        #self.mongo = PyMongo(app, uri, *args, **kwargs)
